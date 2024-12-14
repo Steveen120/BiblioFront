@@ -1,0 +1,39 @@
+<div class="prestamo-form-container">
+    <h2>Registrar Préstamo</h2>
+    <form [formGroup]="prestamoForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="libroId">ID del Libro</label>
+        <input id="libroId" formControlName="libroId" type="text" class="form-control" placeholder="ID del libro" />
+        <div *ngIf="prestamoForm.get('libroId')?.invalid && prestamoForm.get('libroId')?.touched" class="error">
+          El ID del libro es obligatorio.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="personaId">ID de la Persona</label>
+        <input id="personaId" formControlName="personaId" type="text" class="form-control" placeholder="ID de la persona" />
+        <div *ngIf="prestamoForm.get('personaId')?.invalid && prestamoForm.get('personaId')?.touched" class="error">
+          El ID de la persona es obligatorio.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="prestamoDate">Fecha de Préstamo</label>
+        <input id="prestamoDate" formControlName="prestamoDate" type="date" class="form-control" />
+        <div *ngIf="prestamoForm.get('prestamoDate')?.invalid && prestamoForm.get('prestamoDate')?.touched" class="error">
+          La fecha de préstamo es obligatoria.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="returnDate">Fecha de Devolución</label>
+        <input id="returnDate" formControlName="returnDate" type="date" class="form-control" />
+        <div *ngIf="prestamoForm.get('returnDate')?.invalid && prestamoForm.get('returnDate')?.touched" class="error">
+          La fecha de devolución es obligatoria.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="prestamoForm.invalid" class="btn btn-primary">Registrar Préstamo</button>
+    </form>
+  </div>
+  

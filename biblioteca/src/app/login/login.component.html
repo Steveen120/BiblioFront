@@ -1,0 +1,39 @@
+<div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Usuario</label>
+        <input
+          id="username"
+          type="text"
+          formControlName="username"
+          placeholder="Ingrese su usuario"
+          required
+        />
+        <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+          <small class="error">El usuario es obligatorio.</small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
+          placeholder="Ingrese su contraseña"
+          required
+        />
+        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+          <small class="error">La contraseña es obligatoria.</small>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+    </form>
+  
+    <!-- Botón de Registro (Redirige a la página de registro) -->
+    <div class="button-container">
+        <button>Registro</button>
+    </div>
+</div>

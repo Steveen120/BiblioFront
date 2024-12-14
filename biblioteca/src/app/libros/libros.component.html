@@ -1,0 +1,39 @@
+<div class="libro-form-container">
+    <h2>Agregar Nuevo Libro</h2>
+    <form [formGroup]="libroForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="title">Título</label>
+        <input id="title" formControlName="title" type="text" class="form-control" placeholder="Título del libro" />
+        <div *ngIf="libroForm.get('title')?.invalid && libroForm.get('title')?.touched" class="error">
+          El título es obligatorio.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="author">Autor</label>
+        <input id="author" formControlName="author" type="text" class="form-control" placeholder="Autor del libro" />
+        <div *ngIf="libroForm.get('author')?.invalid && libroForm.get('author')?.touched" class="error">
+          El autor es obligatorio.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="year">Año de Publicación</label>
+        <input id="year" formControlName="year" type="text" class="form-control" placeholder="Año de publicación" />
+        <div *ngIf="libroForm.get('year')?.invalid && libroForm.get('year')?.touched" class="error">
+          El año es obligatorio y debe ser un número de 4 dígitos.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="genre">Género</label>
+        <input id="genre" formControlName="genre" type="text" class="form-control" placeholder="Género del libro" />
+        <div *ngIf="libroForm.get('genre')?.invalid && libroForm.get('genre')?.touched" class="error">
+          El género es obligatorio.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="libroForm.invalid" class="btn btn-primary">Agregar Libro</button>
+    </form>
+  </div>
+  
