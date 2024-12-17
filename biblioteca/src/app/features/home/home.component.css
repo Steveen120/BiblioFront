@@ -1,113 +1,146 @@
+/* General body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* Fondo claro y suave */
     margin: 0;
     padding: 0;
-    display: flex;
   }
   
+  /* Sidebar */
   .sidebar {
-    width: 250px;
-    background-color: #812323;
-    padding-top: 20px;
-    position: fixed;
+    width: 260px; /* Ampliamos un poco el tamaño de la barra lateral */
     height: 100%;
+    background-color: #34495e; /* Azul más suave */
+    color: #ecf0f1; /* Color de texto claro */
+    position: fixed;
     top: 0;
     left: 0;
+    padding-top: 40px; /* Añadimos un poco más de espacio en la parte superior */
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  .sidebar-logo img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    border-bottom: 2px solid #db9b34; /* Línea de separación */
+    margin-bottom: 30px;
   }
   
   .sidebar ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    margin: 0;
   }
   
-  .sidebar li {
+  .sidebar-item {
     padding: 15px;
-    text-align: left;
-  }
-  
-  .sidebar li a {
-    color: white;
     text-decoration: none;
-    font-size: 18px;
+    color: #ecf0f1;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    border-bottom: 1px solid #7f8c8d; /* Separación entre items */
   }
   
-  .sidebar li a:hover {
-    background-color: #575757;
-    border-radius: 5px;
+  .sidebar-item:hover {
+    background-color: #db9b34; /* Fondo naranja al pasar el mouse */
+    padding-left: 25px; /* Espaciado adicional al hacer hover */
   }
   
-  .sidebar li a i {
-    font-size: 20px;
+  .sidebar-item i {
+    margin-right: 15px; /* Espacio entre icono y texto */
+    font-size: 1.4rem; /* Tamaño de iconos mayor */
   }
   
-  /* Contenido principal */
+  /* Content Area */
   .content {
-    margin-left: 250px; /* Deja espacio para la barra lateral */
-    width: calc(100% - 250px);
+    margin-left: 260px; /* Desplazamos contenido para que no quede debajo de la sidebar */
     padding: 20px;
-  }
-  
-  .title {
-    text-align: center;
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 40px;
+    background-color: #fff; /* Fondo blanco */
+    min-height: 100vh; /* Aseguramos que ocupe toda la altura */
   }
   
   /* Navbar */
   .navbar {
-    background-color: #007bff;
-    padding: 15px;
+    background-color: #34495e; /* Fondo oscuro */
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más intensa */
   }
   
   .navbar-brand {
-    font-size: 1.5rem;
+    color: #db9b34;
+    font-size: 2rem;
     font-weight: bold;
+  }
+  
+  .menu-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
   
   .search-container {
     display: flex;
-    gap: 10px;
+    align-items: center;
   }
   
   .search-input {
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    margin-right: 15px;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    font-size: 1.1rem;
+    width: 300px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #db9b34; /* Resalta el borde del input cuando está enfocado */
   }
   
   .search-button {
-    padding: 8px 15px;
-    background-color: #0056b3;
+    padding: 12px 25px;
+    background-color: #db9b34;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
     cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
   }
   
   .search-button:hover {
-    background-color: #004085;
+    background-color: #2980b9;
+  }
+  
+  /* Título de la página */
+  .title {
+    color: #2c3e50;
+    font-weight: bold;
+    margin-top: 60px;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
   }
   
   /* Tarjetas */
-  .card {
+  .libro-card {
+    border-radius: 15px;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .libro-card:hover {
+    transform: translateY(-10px); /* Movimiento hacia arriba al hacer hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
   }
   
   .card-body {
@@ -115,45 +148,52 @@ body {
   }
   
   .card-title {
-    font-size: 1.25rem;
-    color: #333;
+    color: #34495e;
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
   }
   
   .card-text {
-    color: #555;
+    color: #7f8c8d;
+    font-size: 1.1rem;
     margin-bottom: 20px;
   }
   
-  .card-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
+  /* Botones */
   .btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-align: center;
     text-decoration: none;
-    border-radius: 4px;
     display: inline-block;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
   }
   
-  .btn:hover {
-    background-color: #0056b3;
+  /* Botones primarios */
+  .btn-primary {
+    background-color: #db9b34;
+    color: white;
+    border: none;
   }
   
-  /* Sección de varias tarjetas */
-  .cards-section {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    margin-top: 40px;
+  .btn-primary:hover {
+    background-color: #2980b9;
+    transform: scale(1.05); /* Efecto de escala al hacer hover */
   }
   
-  .cards-section .card {
-    flex: 1;
-    min-width: 300px;
+  /* Botones secundarios */
+  .btn-secondary {
+    background-color: #a69a95;
+    color: white;
+    border: none;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #7f8c8d;
+    transform: scale(1.05);
   }
   

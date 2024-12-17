@@ -7,24 +7,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './features/home/home.component';
 import { UsuriosComponent } from './features/usurios/usurios.component';
 import { LoginComponent } from './features/auth/login/login.component';
-import { LibrosComponent } from './features/libros/libros.component';
-import { PrestamosComponent } from './features/prestamos/prestamos.component';
 import { RegisterComponent } from './features/auth/register/register.component';
 // Interceptors
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ListaLibrosComponent } from './features/libros/lista-libros/lista-libros.component';
+import { ListaLibrosPrestadosComponent } from './features/libros/lista-libros-prestados/lista-libros-prestados.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,      
-    LibrosComponent,
-    PrestamosComponent,
-    UsuriosComponent,
     HomeComponent,
-    RegisterComponent
+    UsuriosComponent,
+    RegisterComponent,
+    ListaLibrosComponent,
+    ListaLibrosPrestadosComponent
   ],
   imports: [
     BrowserModule,
