@@ -11,7 +11,7 @@ body {
 .sidebar {
   width: 260px; /* Ampliamos un poco el tamaño de la barra lateral */
   height: 100%;
-  background-color: #34495e; /* Azul más suave */
+  background-color: #004F9F; /* Azul más suave */
   color: #ecf0f1; /* Color de texto claro */
   position: fixed;
   top: 0;
@@ -65,7 +65,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #34495e; /* Fondo oscuro */
+  background-color: #004F9F; /* Fondo oscuro */
   padding: 20px 30px;
   display: flex;
   justify-content: space-between;
