@@ -1,0 +1,84 @@
+<<<<<<< HEAD
+<div class="container">
+  <!-- Sidebar -->
+  <div class="sidebar" [class.open]="isMenuVisible">
+    <!-- Logo en la parte superior del menú -->
+    <div class="sidebar-logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFZqEf_cYwW2SNptH31gvAcJsxEKs5LaKGGw&s" alt="Logo" class="logo-img">
+    </div>
+    <ul>
+      <li><a href="/home" class="sidebar-item"><i class="fa fa-home"></i> Inicio</a></li>
+      <li><a href="/libros-disponibles" class="sidebar-item"><i class="fa fa-info-circle"></i>Biblioteca</a></li>
+      <li><a href="/libros-prestados" class="sidebar-item"><i class="fa fa-cogs"></i>Libros Prestados</a></li>
+      <li><a href="/usuarios" class="sidebar-item"><i class="fa fa-envelope"></i>Usuarios</a></li>
+      <li><a href="/libros" class="sidebar-item"><i class="fa fa-envelope"></i>Libros</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <!-- Navbar con ícono de menú draw -->
+    <nav class="navbar">
+      <button class="menu-button" (click)="toggleMenu()">
+        <i class="fa fa-bars"></i> <!-- Ícono de menú hamburguesa -->
+      </button>
+      <a class="navbar-brand">YAVI BIBLIOTECA</a>
+    </nav>
+    <h1 class="title">Libros Disponibles</h1>
+    <div class="container mt-4">
+      <!-- Mensaje informativo -->
+      <div *ngIf="mensaje" class="alert alert-info">{{ mensaje }}</div>
+      <!-- Grid de libros disponibles -->
+      <div class="row">
+        <div *ngFor="let libro of librosDisponibles" class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm libro-card">
+            <div class="card-body">
+              <h5 class="card-title">{{ libro.titulo }}</h5>
+              <p class="card-text">Autor: {{ libro.autor }}</p>
+              <p class="card-text">Descripcion: {{ libro.descripcion }}</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-primary" (click)="prestarLibro(libro.id)">
+                Prestar
+              </button>
+            </div>
+          </div>
+=======
+<div class="container mt-4">
+  <!-- Título y botón de navegación -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3 class="titulo">Libros Disponibles</h3>
+    <button class="btn btn-secondary" routerLink="/libros-prestados">
+      Ver Libros Prestados
+    </button>
+  </div>
+
+  <!-- Mensaje informativo -->
+  <div *ngIf="mensaje" class="alert alert-info">{{ mensaje }}</div>
+
+  <!-- Grid de libros disponibles -->
+  <div class="row">
+    <div
+      *ngFor="let libro of librosDisponibles"
+      class="col-md-4 mb-4"
+    >
+      <div class="card h-100 shadow-sm libro-card">
+        <div class="card-body">
+          <h5 class="card-title">{{ libro.titulo }}</h5>
+          <p class="card-text">Autor: {{ libro.autor }}</p>
+        </div>
+        <div class="card-footer text-end">
+          <button
+            class="btn btn-primary"
+            (click)="prestarLibro(libro.id)"
+          >
+            Prestar
+          </button>
+>>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
+        </div>
+      </div>
+    </div>
+  </div>
+<<<<<<< HEAD
+</div>
+=======
+</div>
+>>>>>>> b8fbf5697c112c738972f857fda929dc1925b747

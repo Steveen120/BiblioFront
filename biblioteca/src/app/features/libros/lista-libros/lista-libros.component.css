@@ -1,0 +1,268 @@
+<<<<<<< HEAD
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6; /* Fondo claro y suave */
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px; /* Ampliamos un poco el tamaño de la barra lateral */
+  height: 100%;
+  background-color: #34495e; /* Azul más suave */
+  color: #ecf0f1; /* Color de texto claro */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 40px; /* Añadimos un poco más de espacio en la parte superior */
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.sidebar-logo img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5%;
+  border-bottom: 2px solid chocolate;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-item {
+  padding: 15px;
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+  border-bottom: 1px solid #7f8c8d; /* Separación entre items */
+}
+
+.sidebar-item:hover {
+  background-color: chocolate; /* Fondo naranja al pasar el mouse */
+  padding-left: 25px; /* Espaciado adicional al hacer hover */
+}
+
+.sidebar-item i {
+  margin-right: 15px; /* Espacio entre icono y texto */
+  font-size: 1.4rem; /* Tamaño de iconos mayor */
+}
+
+/* Content Area */
+.content {
+  margin-left: 260px; /* Desplazamos contenido para que no quede debajo de la sidebar */
+  padding: 20px;
+  background-color: #fff; /* Fondo blanco */
+  min-height: 100vh; /* Aseguramos que ocupe toda la altura */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #34495e; /* Fondo oscuro */
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más intensa */
+}
+
+.navbar-brand {
+  color: chocolate;
+  font-size: 2rem;
+  font-weight: bold;
+  align-items: center;
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 12px;
+  margin-right: 15px;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+  font-size: 1.1rem;
+  width: 300px;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: chocolate; /* Resalta el borde del input cuando está enfocado */
+}
+
+.search-button {
+  padding: 12px 25px;
+  background-color: chocolate;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #2980b9;
+}
+
+/* Título de la página */
+.title {
+  color: #2c3e50;
+  font-weight: bold;
+  margin-top: 60px;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Tarjetas */
+.libro-card {
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.libro-card:hover {
+  transform: translateY(-10px); /* Movimiento hacia arriba al hacer hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  color: #34495e;
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.card-text {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Botones */
+.btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+}
+
+/* Botones primarios */
+.btn-primary {
+  background-color: chocolate;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: scale(1.05); /* Efecto de escala al hacer hover */
+}
+
+/* Botones secundarios */
+.btn-secondary {
+  background-color: #a69a95;
+  color: white;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+  transform: scale(1.05);
+}
+=======
+/* Título */
+.titulo {
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  /* Tarjetas de libros */
+  .libro-card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .libro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    color: #34495e;
+    font-size: 1.25rem;
+  }
+  
+  .card-text {
+    color: #7f8c8d;
+    font-size: 1rem;
+  }
+  
+  /* Botones */
+  .btn {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 8px 12px;
+  }
+  
+  .btn-primary {
+    background-color: #db9b34;
+    border-color: #db9b34;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+  }
+  
+  .btn-success {
+    background-color: #27ae60;
+    border-color: #27ae60;
+  }
+  
+  .btn-success:hover {
+    background-color: #229954;
+    border-color: #229954;
+  }
+  
+  .btn-secondary {
+    background-color: #a69a95;
+    border-color: #a69a95;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #7f8c8d;
+    border-color: #7f8c8d;
+  }
+  
+>>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
