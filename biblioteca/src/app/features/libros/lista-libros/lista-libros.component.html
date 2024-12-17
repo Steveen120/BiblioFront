@@ -30,13 +30,15 @@
         <div *ngFor="let libro of librosDisponibles" class="col-md-4 mb-4">
           <div class="card h-100 shadow-sm libro-card">
             <div class="card-body">
+              <img [src]="libro.image" width="150" height="180" alt="Img" class="card-img">
               <h5 class="card-title">{{ libro.titulo }}</h5>
               <p class="card-text">Autor: {{ libro.autor }}</p>
               <p class="card-text">Descripcion: {{ libro.descripcion }}</p>
-            </div>
-            <div class="card-footer text-end">
-              <button class="btn btn-primary" (click)="prestarLibro(libro.id)">
-                Prestar
-              </button>
+              <button class="btn btn-primary" (click)="prestarLibro(libro.id)">Prestar</button>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

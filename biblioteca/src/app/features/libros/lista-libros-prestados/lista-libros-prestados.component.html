@@ -30,17 +30,13 @@
       <div class="book-list">
         <div *ngFor="let libro of librosPrestados" class="col-md-4 mb-4" >
           <div class="card h-100 shadow-sm libro-card">
-            <img [src]="libro.image" width="150" alt="Img" class="card-img">
             <div class="card-body">
+              <img [src]="libro.image" width="150" height="180" alt="Img" class="card-img">
               <h5 class="card-title">{{ libro.titulo }}</h5>
               <p class="card-text">Autor: {{ libro.autor }}</p>
               <p class="card-text">Descripcion: {{ libro.descripcion }}</p>
+                <button class="btn btn-primary" (click)="devolverLibro(libro.id)">Devolver</button>
             </div>
-            <div class="card-footer text-end">
-          <button class="btn btn-primary" (click)="devolverLibro(libro.id)">
-            Devolver
-          </button>
-        </div>
       </div>
       </div>
     </div>
