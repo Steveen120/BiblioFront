@@ -7,8 +7,11 @@ export interface Libro {
   titulo: string;
   autor: string;
   prestado: boolean;
+<<<<<<< HEAD
   image: string;
   descripcion: string;
+=======
+>>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
 }
 
 @Injectable({

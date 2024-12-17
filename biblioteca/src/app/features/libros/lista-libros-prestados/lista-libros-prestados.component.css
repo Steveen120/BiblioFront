@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* General body styles */
 body {
   font-family: 'Arial', sans-serif;
@@ -200,6 +201,8 @@ body {
   transform: scale(1.05);
 }
 =======
+=======
+>>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
 /* Título */
 .titulo {
     color: #2c3e50;
@@ -264,5 +267,9 @@ body {
     background-color: #7f8c8d;
     border-color: #7f8c8d;
   }
+<<<<<<< HEAD
+  
+>>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
+=======
   
 >>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
