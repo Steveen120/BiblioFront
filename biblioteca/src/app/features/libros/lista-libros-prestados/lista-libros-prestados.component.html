@@ -1,0 +1,16 @@
+<div class="container mt-4">
+  <h3>Libros Prestados</h3>
+  <div *ngIf="mensaje" class="alert alert-info">{{ mensaje }}</div>
+
+  <!-- Lista de libros prestados -->
+  <div class="book-list">
+    <div *ngFor="let libro of librosPrestados" class="book-item">
+      <h5>{{ libro.titulo }}</h5>
+      <p>{{ libro.autor }}</p>
+      <button class="btn btn-success" (click)="devolverLibro(libro.id)">
+        Devolver
+      </button>
+    </div>
+  </div>
+
+</div>

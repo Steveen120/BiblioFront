@@ -17,7 +17,7 @@ export class LoginComponent {
 
   login(): void {
     this.authService.login(this.email, this.password).subscribe({
-      next: () => this.router.navigate(['/home']),
+      next: () => this.router.navigate(['/libros-disponibles']),
       error: (err) => alert('Error al iniciar sesión: ' + err.error.message),
     });
   }
