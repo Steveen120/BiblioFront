@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <div class="container">
   <!-- Sidebar -->
   <div class="sidebar" [class.open]="isMenuVisible">
@@ -48,26 +46,3 @@
     </div>
   </div>
 </div>
-=======
-=======
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-<div class="container mt-4">
-  <h3>Libros Prestados</h3>
-  <div *ngIf="mensaje" class="alert alert-info">{{ mensaje }}</div>
-
-  <!-- Lista de libros prestados -->
-  <div class="book-list">
-    <div *ngFor="let libro of librosPrestados" class="book-item">
-      <h5>{{ libro.titulo }}</h5>
-      <p>{{ libro.autor }}</p>
-      <button class="btn btn-success" (click)="devolverLibro(libro.id)">
-        Devolver
-      </button>
-    </div>
-  </div>
-
-</div>
-<<<<<<< HEAD
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-=======
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747

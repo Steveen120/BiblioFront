@@ -23,16 +23,8 @@ body {
     width: 80%;
     margin: 0 auto;
     display: block;
-<<<<<<< HEAD
-<<<<<<< HEAD
     border-radius: 5%;
     border-bottom: 2px solid chocolate;
-=======
-    border-bottom: 2px solid #db9b34; /* Línea de separación */
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-=======
-    border-bottom: 2px solid #db9b34; /* Línea de separación */
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
     margin-bottom: 30px;
   }
   
@@ -53,15 +45,7 @@ body {
   }
   
   .sidebar-item:hover {
-<<<<<<< HEAD
-<<<<<<< HEAD
     background-color: chocolate; /* Fondo naranja al pasar el mouse */
-=======
-    background-color: #db9b34; /* Fondo naranja al pasar el mouse */
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-=======
-    background-color: #db9b34; /* Fondo naranja al pasar el mouse */
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
     padding-left: 25px; /* Espaciado adicional al hacer hover */
   }
   
@@ -89,15 +73,7 @@ body {
   }
   
   .navbar-brand {
-<<<<<<< HEAD
-<<<<<<< HEAD
     color: chocolate;
-=======
-    color: #db9b34;
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-=======
-    color: #db9b34;
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
     font-size: 2rem;
     font-weight: bold;
   }
@@ -126,28 +102,12 @@ body {
   }
   
   .search-input:focus {
-<<<<<<< HEAD
-<<<<<<< HEAD
     border-color: chocolate; /* Resalta el borde del input cuando está enfocado */
-=======
-    border-color: #db9b34; /* Resalta el borde del input cuando está enfocado */
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-=======
-    border-color: #db9b34; /* Resalta el borde del input cuando está enfocado */
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
   }
   
   .search-button {
     padding: 12px 25px;
-<<<<<<< HEAD
-<<<<<<< HEAD
     background-color: chocolate;
-=======
-    background-color: #db9b34;
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-=======
-    background-color: #db9b34;
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
     color: white;
     border: none;
     border-radius: 25px;
@@ -216,15 +176,7 @@ body {
   
   /* Botones primarios */
   .btn-primary {
-<<<<<<< HEAD
-<<<<<<< HEAD
     background-color: chocolate;
-=======
-    background-color: #db9b34;
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-=======
-    background-color: #db9b34;
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
     color: white;
     border: none;
   }

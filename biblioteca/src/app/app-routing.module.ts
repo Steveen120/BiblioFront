@@ -12,22 +12,12 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'usuarios', component: UsuriosComponent }, 
   { path: 'home', component: HomeComponent },
- 
   //{ path: 'home', component: HomeComponent, canActivate: [AuthGuard] }, 
   { path: 'libros-disponibles', component: ListaLibrosComponent, canActivate: [AuthGuard] },
   { path: 'libros-prestados', component: ListaLibrosPrestadosComponent, canActivate: [AuthGuard] },
-<<<<<<< HEAD
-<<<<<<< HEAD
   //{ path: '', redirectTo: '/login', pathMatch: 'full' },
   //{ path: '**', redirectTo: '/login' }
-=======
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', redirectTo: '/login' }
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-=======
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', redirectTo: '/login' }
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
+
 ];
 
 @NgModule({

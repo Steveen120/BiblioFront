@@ -1,13 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Libro, LibroService } from '../../../core/services/libro.service';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Router } from '@angular/router';
-
-=======
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-=======
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
 
 @Component({
   selector: 'app-lista-libros-prestados',
@@ -20,15 +13,7 @@ export class ListaLibrosPrestadosComponent implements OnInit {
   librosPrestados: Libro[] = [];
   mensaje = '';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   constructor(private libroService: LibroService, private router: Router) {}
-=======
-  constructor(private libroService: LibroService) {}
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-=======
-  constructor(private libroService: LibroService) {}
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
 
   ngOnInit(): void {
     this.cargarLibrosPrestados();
@@ -56,8 +41,7 @@ export class ListaLibrosPrestadosComponent implements OnInit {
       }
     });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   ///
   isMenuVisible: boolean = false; // Estado del menú
   // Función para redirigir al mismo home
@@ -73,8 +57,5 @@ export class ListaLibrosPrestadosComponent implements OnInit {
   closeMenu(): void {
     this.isMenuVisible = false;
   }
-=======
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
-=======
->>>>>>> b8fbf5697c112c738972f857fda929dc1925b747
+
 }
