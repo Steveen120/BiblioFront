@@ -1,1 +1,71 @@
-<p>home works!</p>
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar" [class.open]="isMenuVisible">
+      <!-- Logo en la parte superior del menú -->
+      <div class="sidebar-logo">
+        <img src="https://via.placeholder.com/150" alt="Logo" class="logo-img">
+      </div>
+      <ul>
+        <li><a href="/home"><i class="fa fa-home"></i> Inicio</a></li>
+        <li><a href="/about"><i class="fa fa-info-circle"></i> Acerca de</a></li>
+        <li><a href="/services"><i class="fa fa-cogs"></i> Servicios</a></li>
+        <li><a href="/contact"><i class="fa fa-envelope"></i> Contacto</a></li>
+      </ul>
+    </div>
+  
+    <div class="content">
+      <!-- Navbar con ícono de menú draw -->
+      <nav class="navbar">
+        <button class="menu-button" (click)="toggleMenu()">
+          <i class="fa fa-bars"></i> <!-- Ícono de menú hamburguesa -->
+        </button>
+  
+        <a class="navbar-brand" href="#">Bienvenido a Nuestra Libreria</a>
+        
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Buscar...">
+          <button class="search-button">Buscar</button>
+        </div>
+      </nav>
+  
+      <h1 class="title">Bienvenido a la Página de Inicio</h1>
+  
+      <!-- Contenido principal -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Elige el libro que quieras</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn">Ver más</a>
+        </div>
+      </div>
+  
+      <!-- Sección adicional -->
+      <div class="cards-section">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo" class="card-img">
+          <div class="card-body">
+            <h5 class="card-title">Título de la Tarjeta</h5>
+            <p class="card-text">Descripción breve de la tarjeta. Aquí puedes agregar más información.</p>
+            <a href="#" class="btn">Más información</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo" class="card-img">
+          <div class="card-body">
+            <h5 class="card-title">Título de la Tarjeta</h5>
+            <p class="card-text">Descripción breve de la tarjeta. Aquí puedes agregar más información.</p>
+            <a href="#" class="btn">Más información</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo" class="card-img">
+          <div class="card-body">
+            <h5 class="card-title">Título de la Tarjeta</h5>
+            <p class="card-text">Descripción breve de la tarjeta. Aquí puedes agregar más información.</p>
+            <a href="#" class="btn">Más información</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

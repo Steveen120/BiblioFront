@@ -22,8 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,      
     LibrosComponent,
     PrestamosComponent,
-    HomeComponent,
     UsuriosComponent,
+    HomeComponent,
     RegisterComponent
   ],
   imports: [
