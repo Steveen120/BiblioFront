@@ -1,7 +1,7 @@
 
 /* General body styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #f4f7f6; /* Fondo claro y suave */
   margin: 0;
   padding: 0;
@@ -126,8 +126,8 @@ body {
 .title {
   color: #2c3e50;
   font-weight: bold;
-  margin-top: 60px;
-  font-size: 3rem;
+  margin-top: 30px;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -226,6 +226,11 @@ body {
   .card-text {
     color: #7f8c8d;
     font-size: 1rem;
+  }
+  .card-text2 {
+    color: #7f8c8d;
+    font-size: 1rem;
+    font-weight: bold;
   }
   
   /* Botones */
