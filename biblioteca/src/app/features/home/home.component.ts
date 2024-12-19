@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  isMenuVisible: boolean = false; // Estado del menú
+  isMenuVisible: boolean = false; /// Estado del menú
 
   constructor(private router: Router) {}
 

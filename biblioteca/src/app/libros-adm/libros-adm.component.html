@@ -8,12 +8,13 @@
         </div>
         <ul>
           <li><a href="/home" class="sidebar-item"><i class="fa fa-home"></i> Inicio</a></li>
-          <li><a href="/libros-disponibles" class="sidebar-item"><i class="fa fa-info-circle"></i>Biblioteca</a></li>
-          <li><a href="/libros-prestados" class="sidebar-item"><i class="fa fa-cogs"></i>Libros Prestados</a></li>
-          <li><a href="/usuarios" class="sidebar-item"><i class="fa fa-envelope"></i>Usuarios</a></li>
-          <li><a href="/libros" class="sidebar-item"><i class="fa fa-envelope"></i>Libros</a></li>
+          <li><a href="/libros-disponibles" class="sidebar-item"><i class="fa fa-info-circle"></i> Biblioteca</a></li>
+          <li><a href="/libros-prestados" class="sidebar-item"><i class="fa fa-cogs"></i> Libros Prestados</a></li>
+          <li><a href="/usuarios" class="sidebar-item"><i class="fa fa-envelope"></i> Usuarios</a></li>
+          <li><a href="/libros" class="sidebar-item"><i class="fa fa-envelope"></i> Libros</a></li>
         </ul>
       </div>
+
       <div class="content">
         <!-- Navbar con ícono de menú draw -->
         <nav class="navbar">
@@ -21,8 +22,13 @@
             <i class="fa fa-bars"></i> <!-- Ícono de menú hamburguesa -->
           </button>
           <a class="navbar-brand">YAVI BIBLIOTECA</a>
+
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button class="search-button">Buscar</button>
+          </div>
         </nav>
-  
+
         <!-- Formulario -->
         <div class="form-container mt-4">
           <h2>Agregar Libro</h2>
@@ -46,7 +52,7 @@
             <button type="submit" class="btn btn-success">Agregar</button>
           </form>
         </div>
-  
+
         <div class="container mt-4">
           <!-- Mensaje informativo -->
           <div *ngIf="mensaje" class="alert alert-info">{{ mensaje }}</div>
@@ -68,5 +74,4 @@
         </div>
       </div>
     </div>
-  </body>
-  
+</body>
