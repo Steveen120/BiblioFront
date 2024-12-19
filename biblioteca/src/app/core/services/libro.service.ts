@@ -34,4 +34,16 @@ export class LibroService {
   devolverLibro(id: number): Observable<Libro> {
     return this.http.post<Libro>(`${this.baseUrl}/${id}/devolver`, {});
   }
+
+  eliminarLibro(id: number): Observable <void>  {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`, {})
+  }
+
+  editarLibro(id: number, formData: FormData): Observable<Libro> {
+    return this.http.put<Libro>(`${this.baseUrl}/${id}`, formData)
+  }
+
+ agregarLibro(formData: FormData): Observable<Libro> {
+  return this.http.post<Libro>(`${this.baseUrl}`, formData)
+ }
 }

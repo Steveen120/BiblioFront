@@ -15,6 +15,7 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListaLibrosComponent } from './features/libros/lista-libros/lista-libros.component';
 import { ListaLibrosPrestadosComponent } from './features/libros/lista-libros-prestados/lista-libros-prestados.component';
+import { LibrosAdmComponent } from './libros-adm/libros-adm.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ListaLibrosPrestadosComponent } from './features/libros/lista-libros-pr
     UsuriosComponent,
     RegisterComponent,
     ListaLibrosComponent,
-    ListaLibrosPrestadosComponent
+    ListaLibrosPrestadosComponent,
+    LibrosAdmComponent
   ],
   imports: [
     BrowserModule,

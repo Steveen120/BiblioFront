@@ -1,1 +1,41 @@
-<p>usurios works!</p>
+<div class="container">
+    <!-- Navbar (Mantenemos el mismo del Home) -->
+    <!-- <app-navbar></app-navbar> -->
+  
+    <div class="row">
+      <!-- Menu Lateral (Draw) -->
+      <!-- <app-menu></app-menu> -->
+  
+      <!-- Contenido Principal -->
+      <div class="col main-content">
+        <h2>Lista de Usuarios</h2>
+  
+        <!-- Tabla de Usuarios -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let usuario of usuarios">
+              <td>{{usuario.id}}</td>
+              <td>{{usuario.nombre}}</td>
+              <td>{{usuario.email}}</td>
+              <td>{{usuario.rol}}</td>
+              <td>
+                <!-- Botones de acción (por ejemplo, editar, eliminar) -->
+                <!-- <button class="btn btn-info" (click)="editarUsuario(usuario)">Editar</button> -->
+                <button class="btn btn-danger" (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,25 @@
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .sidebar .list-group-item {
+    background-color: #343a40;
+    border: none;
+    color: white;
+  }
+  
+  .sidebar .list-group-item a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar .list-group-item:hover {
+    background-color: #495057;
+  }
+  
