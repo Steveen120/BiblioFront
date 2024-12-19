@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { LibroService } from '../core/services/libro.service';
 
-
 @Component({
   selector: 'app-libros-adm',
   standalone: false,
-
-
   templateUrl: './libros-adm.component.html',
   styleUrls: ['./libros-adm.component.css'],
 })

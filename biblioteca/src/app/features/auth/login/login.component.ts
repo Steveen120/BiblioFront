@@ -21,4 +21,7 @@ export class LoginComponent {
       error: (err) => alert('Error al iniciar sesión: ' + err.error.message),
     });
   }
+  register(): void {
+    this.router.navigate(['/register']);
+  }
 }

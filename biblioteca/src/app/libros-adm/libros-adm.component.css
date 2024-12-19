@@ -176,25 +176,38 @@ body {
   
   /* Botones primarios */
   .btn-primary {
-    background-color: chocolate;
-    color: white;
+    background-color: #2980b9;
+    color: black;
     border: none;
   }
   
   .btn-primary:hover {
-    background-color: #2980b9;
+    background-color: black;
+    color: white;
     transform: scale(1.05); /* Efecto de escala al hacer hover */
   }
+    /* Botones primarios */
+    .btn-warning {
+      background-color: yellow;
+      color: black;
+      border: none;
+    }
+    
+    .btn-warning:hover {
+      background-color: rgb(114, 114, 12);
+      transform: scale(1.05); /* Efecto de escala al hacer hover */
+    }
+
   
   /* Botones secundarios */
   .btn-secondary {
-    background-color: #a69a95;
+    background-color: #dc3545;
     color: white;
     border: none;
   }
   
   .btn-secondary:hover {
-    background-color: #7f8c8d;
+    background-color: #333;
     transform: scale(1.05);
   }
   
@@ -251,13 +264,14 @@ button.btn-success {
     padding: 10px;
     font-size: 1.1rem;
     font-weight: 600;
-    background-color: #28a745;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 
 button.btn-success:hover {
     background-color: #218838;
@@ -266,4 +280,88 @@ button.btn-success:hover {
 button.btn-success:active {
     background-color: #1e7e34;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+}
+/* Estilo para el fondo del modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegúrate de que el modal esté encima de otros elementos */
+}
+
+/* Estilo para el contenido del modal */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px; /* Más ancho para incluir descripciones */
+  max-width: 90%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Botón para cerrar el modal */
+.modal-content .close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Cambia el color del botón de cerrar al pasar el ratón */
+.modal-content .close:hover {
+  color: #ff0000;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Botones dentro del modal */
+.modal-content .btn {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+/* Ajuste para formularios */
+.modal-content .form-group {
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 576px) {
+  .modal-content {
+    width: 90%;
+  }
 }

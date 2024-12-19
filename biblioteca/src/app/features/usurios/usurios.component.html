@@ -1,81 +1,77 @@
-<div class="container">
-    <!-- Sidebar -->
-    <div class="sidebar" [class.open]="isMenuVisible">
-        <!-- Logo en la parte superior del menú -->
-        <div class="sidebar-logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFZqEf_cYwW2SNptH31gvAcJsxEKs5LaKGGw&s"
-                alt="Logo" class="logo-img">
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" [class.open]="isMenuVisible">
+            <div class="sidebar-logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFZqEf_cYwW2SNptH31gvAcJsxEKs5LaKGGw&s"
+                    alt="Logo" class="logo-img">
+            </div>
+            <ul>
+                <li><a href="/home" class="sidebar-item"><i class="fa fa-home"></i> Inicio</a></li>
+                <li><a href="/libros-disponibles" class="sidebar-item"><i class="fa fa-info-circle"></i>Biblioteca</a></li>
+                <li><a href="/libros-prestados" class="sidebar-item"><i class="fa fa-cogs"></i>Libros Prestados</a></li>
+                <li><a href="/usuarios" class="sidebar-item"><i class="fa fa-envelope"></i>Usuarios</a></li>
+                <li><a href="/libros-adm" class="sidebar-item"><i class="fa fa-envelope"></i>Libros</a></li>
+                <li><a href="/login" class="sidebar-item"><i class="fa fa-envelope"></i>Cerra Sesión</a></li>
+            </ul>
         </div>
-        <ul>
-            <li><a href="/home" class="sidebar-item"><i class="fa fa-home"></i> Inicio</a></li>
-            <li><a href="/libros-disponibles" class="sidebar-item"><i class="fa fa-info-circle"></i>Biblioteca</a></li>
-            <li><a href="/libros-prestados" class="sidebar-item"><i class="fa fa-cogs"></i>Libros Prestados</a></li>
-            <li><a href="/usuarios" class="sidebar-item"><i class="fa fa-envelope"></i>Usuarios</a></li>
-            <li><a href="/libros-adm" class="sidebar-item"><i class="fa fa-envelope"></i>Libros</a></li>
-        </ul>
     </div>
-
+    
+    <!-- Contenido principal -->
     <div class="content">
-        <!-- Navbar con ícono de menú draw -->
+        <!-- Navbar -->
         <nav class="navbar">
             <button class="menu-button" (click)="toggleMenu()">
-                <i class="fa fa-bars"></i> <!-- Ícono de menú hamburguesa -->
+                <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand">YAVI BIBLIOTECA</a>
-
-            <div class="search-container">
-                <input type="text" class="search-input" placeholder="Buscar...">
-                <button class="search-button">Buscar</button>
-            </div>
+            <span class="navbar-brand">Gestión de Usuarios</span>
         </nav>
-
-        <!-- Contenido Principal -->
-        <div class="row">
-            <div class="col main-content">
-                <h2>Lista de Usuarios</h2>
-
-                <!-- Tabla de Usuarios con Ejemplos -->
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nombre</th>
-                            <th>Email</th>
-                            <th>Rol</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Juan Pérez</td>
-                            <td>juan.perez.com</td>
-                            <td>Administrador</td>
-                            <td>
-                                <button class="btn btn-danger">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>María López</td>
-                            <td>maria.lopez.com</td>
-                            <td>Usuario</td>
-                            <td>
-                                <button class="btn btn-danger">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Carlos Gómez</td>
-                            <td>carlos.gomez.com</td>
-                            <td>Moderador</td>
-                            <td>
-                                <button class="btn btn-danger">Eliminar</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+    
+        <!-- Tabla de usuarios -->
+        <div class="table-container mt-4">
+            <h2>Usuarios</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of usuarios">
+                        <td>{{ usuario.id }}</td>
+                        <td>{{ usuario.nombre }}</td>
+                        <td>{{ usuario.email }}</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm" (click)="seleccionarUsuario(usuario)">EDITAR</button>
+                            <button class="btn btn-danger btn-sm" (click)="eliminarUsuario(usuario.id)">ELIMINAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Modal para editar usuario -->
+        <div *ngIf="usuarioSeleccionado" class="modal">
+            <div class="modal-content">
+                <span class="close" (click)="usuarioSeleccionado = null">&times;</span>
+                <h2>Editar Usuario</h2>
+                <form (ngSubmit)="guardarUsuario()">
+                    <div class="form-group">
+                        <label for="editNombre">Nombre:</label>
+                        <input type="text" id="editNombre" class="form-control" [(ngModel)]="usuarioSeleccionado.nombre"
+                            name="editNombre" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editEmail">Email:</label>
+                        <input type="email" id="editEmail" class="form-control" [(ngModel)]="usuarioSeleccionado.email"
+                            name="editEmail" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </form>
             </div>
         </div>
     </div>
-</div>
+</body>

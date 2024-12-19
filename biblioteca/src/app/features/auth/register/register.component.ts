@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegisterService } from '../../../core/services/register.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +15,7 @@ export class RegisterComponent {
   successMessage: string = '';
   errorMessage: string = '';
 
-  constructor(private fb: FormBuilder, private registerService: RegisterService) {
+  constructor(private fb: FormBuilder, private registerService: RegisterService, private router: Router) {
     this.registerForm = this.fb.group({
       nombre: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
@@ -39,5 +40,8 @@ export class RegisterComponent {
     } else {
       this.errorMessage = 'Por favor, completa el formulario correctamente.';
     }
+  }
+  login(): void {
+    this.router.navigate(['/login']);
   }
 }

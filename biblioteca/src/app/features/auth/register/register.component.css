@@ -17,12 +17,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid #db9b34; /* Bordes con el color db9b34 */
+  border: 2px solid chocolate; /* Bordes con el color db9b34 */
 }
 
 /* Título del formulario */
 .register-container h2 {
-  color: #2c3e50;
+  color: #004F9F;
   font-size: 2rem;
   margin-bottom: 30px;
 }
@@ -45,7 +45,7 @@ select {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid #db9b34; /* Bordes con el color db9b34 */
+  border: 1px solid chocolate; /* Bordes con el color db9b34 */
   border-radius: 5px;
   margin-top: 5px;
   transition: border-color 0.3s ease;
@@ -53,7 +53,7 @@ select {
 
 .input:focus,
 select:focus {
-  border-color: #db9b34; /* Resalta el borde del input cuando está enfocado */
+  border-color: chocolate; /* Resalta el borde del input cuando está enfocado */
 }
 
 /* Mensajes de error */
@@ -64,7 +64,7 @@ small {
 
 /* Botón de registro */
 button {
-  background-color: #db9b34;
+  background-color: chocolate;
   color: white;
   padding: 12px 25px;
   border: none;
@@ -76,7 +76,7 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #004F9F;
   transform: scale(1.05); /* Efecto de escala al hacer hover */
 }
 
